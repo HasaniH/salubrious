@@ -1,0 +1,28 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Files to igonore in project #
+/salubrious/Podfile
+/salubrious/Podfile.lock
+/salubrious/salubrious/Assets.xcassets
+/salubrious/salubrious/GoogleService-Info.plist
+/salubrious/salubrious/Info.plist
+/salubrious/Pods/
+/salubrious/salubrious.xcodeproj
+/salubrious/salubrious.xcworkspace
