@@ -26,3 +26,8 @@ Thumbs.db
 /salubrious/Pods/
 /salubrious/salubrious.xcodeproj
 /salubrious/salubrious.xcworkspace
+/GoogleService-Info.plist
+/google-cloud-sdk/
+/firebase-android-client/
+/firebase-appengine-backend/
+/exec -l /
