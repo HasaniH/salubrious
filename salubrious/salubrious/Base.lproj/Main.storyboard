@@ -50,7 +50,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Salubrious" id="cFm-mz-7f2">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="mJa-Bq-Wg1"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="luh-Df-YQj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YKB-On-9C1">
+                            <connections>
+                                <action selector="addRestaurant:" destination="JRH-1d-Z3a" id="9uQ-x3-Vy6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LP-AD-KRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,7 +66,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3oX-7s-NRH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Re4-oz-nJ1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Re4-oz-nJ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.3770655208931829" blue="0.41129301224345616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -40,4 +40,8 @@ struct Restaurant {
             addedByUser = ""
         }
     }
+    
+    func toAnyObject() -> AnyObject {
+        return ["content":content, "addedByUser":addedByUser] as NSDictionary
+    }
 }
