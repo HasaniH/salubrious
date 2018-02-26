@@ -1,0 +1,50 @@
+// Links:
+Research Proposal: https://docs.google.com/document/d/1g_KmAehetCTiDOfC3jLr4us6kJO9t3PDDDHIHLhqyfU/edit?usp=sharing
+
+Frontend/Backend Design: https://docs.google.com/document/d/1MAx02DLOne7PjeXoSk8zFGF4WvH6HKSPeAg2fraP04c/edit?usp=sharing
+
+Github Link: https://github.com/HasaniH/salubrious
+
+// Ideas
+
+Talked with Dr. Ng on 02/19/2018 and showed him my progress thus far. My project will be done in iOS rather than Android as I initially proposed due to the fact that I believe it will be more feasible. 
+The application will function for two different type of users. For the owner of a healthy restaurant and also the client searching for a healthy restaurant. 
+
+- The owner of the restaurant will have authentication to add their restaurant to the database. 
+
+- A normal user will not have this access but will have access to query restaurants in a neighborhood.
+
+There are different ways to approach this. For the user I can have a droplist of the neigborhoods to search or I can have the user enter their zip code to search for nearby neighborhoods. 
+An advanced way which is ideal for the user is to have the current location feature in the app where the user would allow the app to figure out restaurants nearby them.
+
+Pros of Droplist:
+- If a user is not familiar with neighborhoods, they can choose the one which sounds like theirs.
+- Easy to use and does not allow a typo
+
+Cons of Droplist:
+- May be easier to just search if there are tons of neighborhoods
+- User may not recognize or know any of the restaurants
+
+Pros of zip code search:
+- If a person does not know their neighborhood, they can search by their zip code
+- Simple search
+
+Cons of zip code search:
+- Complex way to determine the range of which restaurants are near the zip code
+- Some people may know the neighborhood but not the zip code
+
+Pros of current location search:
+- Requires no effort for the user
+
+Cons of current location search:
+- Difficult to learn how to integeate this feature
+
+
+// Implementation
+
+I watched many tutorial videos on how to build an iOS app with Firebase Database: 
+https://www.youtube.com/watch?v=D0MuaFzoxng
+https://www.youtube.com/watch?v=asKXHVUZiIY
+
+This walked me through setting up the initial things to have the app communicate with the database such as: the table view, buttons and communication to the database.
+Right now I do not allow the user to enter their personal email and password so I will need to change this. 
