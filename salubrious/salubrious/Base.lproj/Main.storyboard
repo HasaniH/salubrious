@@ -62,17 +62,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Bnp-H2-b25" kind="showDetail" identifier="LoginViewSegue" id="TYd-nv-7X6"/>
+                        <segue destination="Bnp-H2-b25" kind="showDetail" identifier="LoginSegue" id="TYd-nv-7X6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LP-AD-KRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799.20000000000005" y="-11.244377811094454"/>
         </scene>
-        <!--Restaurants Table View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="MxT-1R-mND">
             <objects>
-                <viewController id="Bnp-H2-b25" customClass="RestaurantsTableViewController" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bnp-H2-b25" customClass="LoginViewController" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DKj-Ev-BnP"/>
                         <viewControllerLayoutGuide type="bottom" id="tO7-Qf-Zjg"/>
