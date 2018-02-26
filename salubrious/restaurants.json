@@ -37,7 +37,7 @@
 			    "Website": "https://whatsyourgusto.com/"
  			 },
  			 {
-			    "Name": "Café Sunflower Buckhead",
+			    "Name": "CafÃ© Sunflower Buckhead",
 			    "Address": "2140 Peachtree Rd Atlanta GA 30309",
 			    "Phone": "(404) 352-8859",
 			    "Website": "http://www.cafesunflower.com/"
@@ -79,7 +79,7 @@
 			    "Website": "http://www.seasons52.com/home"
 			  },
 			  {
-			    "Name": "Zoës Kitchen",
+			    "Name": "ZoÃ«s Kitchen",
 			    "Address": "2333-A Peachtree Rd NE Atlanta GA 30305",
 			    "Phone": "(404) 233-9637",
 			    "Website": "https://zoeskitchen.com/"
@@ -166,7 +166,7 @@
 			   "Website": "http://www.kevinrathbun.com/"
 			 },
 			 {
-			    "Name": "The Brasserie and Neighborhood Café at PARISH",
+			    "Name": "The Brasserie and Neighborhood CafÃ© at PARISH",
 			    "Address": "240 N Highland Ave Atlanta GA 30307",
 			    "Phone": "(404) 681-4434",
 			    "Website": "http://www.parishatl.com/"
@@ -187,7 +187,7 @@
 
     	"Kirkwood": [
     		{
-			   "Name": "Le Petit Marché",
+			   "Name": "Le Petit MarchÃ©",
 			   "Address": "1984 Hosea L Williams Dr Atlanta GA 30317",
 			   "Phone": "(404) 371-9888",
 			   "Website": "https://lepetitmarche.net/"
@@ -346,4 +346,3 @@
 		]
 	}
 }
-

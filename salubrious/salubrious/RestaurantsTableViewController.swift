@@ -14,12 +14,20 @@ class RestaurantsTableViewController: UITableViewController {
     
     var dbRef:DatabaseReference!
     
+    @IBAction func LoginViewButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "LoginViewSegue", sender: self)
+    }
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
 
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dbRef = Database.database().reference().child("healthy-restaurants")
-
-    }
+            }
     @IBAction func addRestaurant(_ sender: Any) {
         
         let restaurantAlert = UIAlertController(title: "New Restaurant", message: "Enter your restaurant: ", preferredStyle: .alert)
@@ -58,6 +66,14 @@ class RestaurantsTableViewController: UITableViewController {
 
         return cell
     }
-
+    
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        if let email = emailTextField.text, let pass = passwordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+                
+            })
+        }
+    }
+    
 
 }
