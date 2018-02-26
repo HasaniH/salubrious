@@ -48,3 +48,6 @@ https://www.youtube.com/watch?v=asKXHVUZiIY
 
 This walked me through setting up the initial things to have the app communicate with the database such as: the table view, buttons and communication to the database.
 Right now I do not allow the user to enter their personal email and password so I will need to change this. 
+
+(2/25/2018)
+Had trouble setting up the login view controller. Spent an hour debugging and I found out that my class for the controller was inheriting a TableViewController and not a view controller which was the reason for the errors. Fixed it and now I have a login view for the app. Will have to work on setting up the feature for logging in a user vs creating a new user.
