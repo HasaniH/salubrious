@@ -21,7 +21,7 @@ class RestaurantsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dbRef = Database.database().reference().child("healthy-restaurants")
+        dbRef = Database.database().reference().child("Neighborhoods").child("Owner-added")
     }
     
     @IBAction func addRestaurant(_ sender: Any) {
