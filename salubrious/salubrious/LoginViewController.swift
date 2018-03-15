@@ -33,19 +33,6 @@ class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
-        // Flip the boolean
-        isLogin = !isLogin
-        
-        if isLogin {
-            loginLabel.text = "Login Here!"
-            loginButton.setTitle("Login", for: .normal)
-        } else {
-            loginLabel.text = "Register Here!"
-            loginButton.setTitle("Register", for: .normal)
-        }
-    }
-    
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         // TODO: Do some form of email and password validation
