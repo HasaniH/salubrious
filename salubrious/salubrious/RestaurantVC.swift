@@ -1,34 +1,66 @@
 //
-//  SignOutVC.swift
-//  Kilo Loco Firebase Email
+//  RestaurantVC.swift
+//  salubrious
 //
-//  Created by Kyle Lee on 5/7/17.
-//  Copyright © 2017 Kyle Lee. All rights reserved.
+//  Created by Hasani Hendrix on 3/15/18.
+//  Copyright © 2018 Hasani Hendrix. All rights reserved.
 //
 
 import UIKit
-import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
-class RestaurantVC: UIViewController {
+class RestaurantsVC: UIViewController {
     
     var dbRef:DatabaseReference!
     
     @IBOutlet weak var label: UILabel!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        dbRef = Database.database().reference().child("healthy-restaurants")
+        dbRef = Database.database().reference().child("Neighborhoods").child("Owner-added")
         
-        guard let username = Auth.auth().currentUser?.displayName else { return }
+        guard (Auth.auth().currentUser?.displayName) != nil else { return }
         
-        label.text = "Hello \(username)"
         
     }
     
-    
+    @IBAction func addRestaurant(_ sender: Any) {
+        let userID = Auth.auth().currentUser?.displayName
+        let restaurantAlert = UIAlertController(title: "New Restaurant", message: "Enter your restaurant information: ", preferredStyle: .alert)
+        restaurantAlert.addTextField { (textField:UITextField) in
+            textField.placeholder = "Address"
+        }
+        
+        restaurantAlert.addTextField { (textField:UITextField) in
+            textField.placeholder = "Name"
+        }
+        
+        restaurantAlert.addTextField { (textField:UITextField) in
+            textField.placeholder = "Phone"
+        }
+        
+        restaurantAlert.addTextField { (textField:UITextField) in
+            textField.placeholder = "Website"
+        }
+        
+        restaurantAlert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (action:UIAlertAction) in
+            let address = restaurantAlert.textFields![0] as UITextField
+            let name = restaurantAlert.textFields![1] as UITextField
+            let phone = restaurantAlert.textFields![2] as UITextField
+            let website = restaurantAlert.textFields![3] as UITextField
+            
+            if address.text != "", name.text != "", phone.text != "", website.text != "" {
+                let restaurant = Restaurant(Address: address.text!, Name: name.text!, Phone: phone.text!, Website: website.text!)
+                
+                let restaurantRef = self.dbRef.child((name.text?.lowercased())!)
+                
+                restaurantRef.setValue(restaurant.toAnyObject())
+            }
+        }))
+        
+        self.present(restaurantAlert, animated:true, completion: nil)
+    }
     
     @IBAction func onSignOutTapped(_ sender: Any) {
         do {
@@ -37,26 +69,5 @@ class RestaurantVC: UIViewController {
         } catch {
             print(error)
         }
-        
-    }
-    
-    @IBAction func addRestaurant(_ sender: Any) {
-        
-        let restaurantAlert = UIAlertController(title: "New Restaurant", message: "Enter your restaurant: ", preferredStyle: .alert)
-        restaurantAlert.addTextField { (textField:UITextField) in
-            textField.placeholder = "Your Restaurant"
-        }
-        restaurantAlert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (action:UIAlertAction) in
-            if let restaurantContent = restaurantAlert.textFields?.first?.text {
-                let userID = Auth.auth().currentUser!.uid
-                let restaurant = Restaurant(content: restaurantContent, addedByUser: userID)
-                
-                let restaurantRef = self.dbRef.child(restaurantContent.lowercased())
-                
-                restaurantRef.setValue(restaurant.toAnyObject())
-            }
-        }))
-        
-        self.present(restaurantAlert, animated:true, completion: nil)
     }
 }

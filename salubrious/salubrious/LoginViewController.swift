@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
                 //Register user with Firebase
                 Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
                     
-                    if let u = user {
+                    if user != nil {
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                         
                     } else {

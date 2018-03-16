@@ -28,13 +28,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSg-fj-bZA">
-                                <rect key="frame" x="135" y="42" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKT-qQ-nHk">
                                 <rect key="frame" x="16" y="146" width="329" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,21 +36,28 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-aH-QMC">
-                                <rect key="frame" x="79" y="218" width="172" height="88"/>
+                                <rect key="frame" x="79" y="234" width="172" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In User"/>
+                                <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="onSignInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZg-fi-rKE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VER-kF-JSh">
-                                <rect key="frame" x="110" y="335" width="141" height="58"/>
+                                <rect key="frame" x="95" y="295" width="141" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to Sign Up"/>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <segue destination="7Pf-dp-i9r" kind="show" id="p8p-y6-9Ty"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSg-fj-bZA">
+                                <rect key="frame" x="154" y="28" width="52" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -83,13 +83,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-vf-qHm">
-                                <rect key="frame" x="131" y="53" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pEZ-I6-QLy">
                                 <rect key="frame" x="16" y="103" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -114,19 +107,26 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxM-CH-nlV">
                                 <rect key="frame" x="96" y="267" width="188" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up User"/>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="onSignUpTapped:" destination="7Pf-dp-i9r" eventType="touchUpInside" id="6sd-zP-wUW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-fG-g9n">
-                                <rect key="frame" x="96" y="387" width="188" height="94"/>
+                                <rect key="frame" x="96" y="340" width="188" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go To Sign In"/>
+                                <state key="normal" title="Sign In"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="y2S-nP-PA2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-vf-qHm">
+                                <rect key="frame" x="157" y="53" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="170.40000000000001" y="839.73013493253382"/>
         </scene>
-        <!--RestaurantVC-->
+        <!--RestaurantsVC-->
         <scene sceneID="dh8-1t-N2y">
             <objects>
-                <viewController id="WTi-Zg-NuO" customClass="RestaurantVC" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WTi-Zg-NuO" customClass="RestaurantsVC" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L9c-fG-Pdg"/>
                         <viewControllerLayoutGuide type="bottom" id="RBD-rY-0V7"/>
@@ -168,17 +168,20 @@
                                     <action selector="onSignOutTapped:" destination="WTi-Zg-NuO" eventType="touchUpInside" id="X5D-fh-J0G"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-uv-JWj">
+                                <rect key="frame" x="16" y="417" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="IFc-DN-cGJ">
+                                        <connections>
+                                            <action selector="addRestaurant:" destination="WTi-Zg-NuO" id="hdf-x9-Ouq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="add" id="YSE-U0-ObM">
-                            <connections>
-                                <action selector="addRestaurant:" destination="WTi-Zg-NuO" id="bKr-OE-orW"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="label" destination="oGx-CA-nos" id="3rh-9V-lbz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="signOutSegue" id="f9F-jW-L2h"/>
@@ -191,6 +194,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="f9F-jW-L2h"/>
-        <segue reference="61r-Rb-fvG"/>
+        <segue reference="74M-39-lAT"/>
     </inferredMetricsTieBreakers>
 </document>
