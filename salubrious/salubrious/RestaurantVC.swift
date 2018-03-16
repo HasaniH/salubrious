@@ -22,7 +22,6 @@ class RestaurantsVC: UIViewController {
         
         guard (Auth.auth().currentUser?.displayName) != nil else { return }
         
-        
     }
     
     @IBAction func addRestaurant(_ sender: Any) {
@@ -61,6 +60,10 @@ class RestaurantsVC: UIViewController {
                 let restaurantRef = self.dbRef.child(neighborhood.text!)
                 
                 restaurantRef.updateChildValues(restaurant.toAnyObject() as! [AnyHashable : Any])
+            }
+            else {
+                AlertController.showAlert(self, title: "Missing Info", message: "Please fill out all fields")
+                return
             }
         }))
         

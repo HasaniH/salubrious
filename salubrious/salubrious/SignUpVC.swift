@@ -27,7 +27,7 @@ class SignUpVC: UIViewController {
             else {
                 AlertController.showAlert(self, title: "Missing Info", message: "Please fill out all fields")
                 return
-        }
+            }
         
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             
@@ -46,8 +46,10 @@ class SignUpVC: UIViewController {
                     AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
                     return
                 }
+                if email.range(of:"owner.com") != nil {
+                    self.performSegue(withIdentifier: "ownerSignUpSegue", sender: nil)
+                }
                 
-                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
                 
             })
         })

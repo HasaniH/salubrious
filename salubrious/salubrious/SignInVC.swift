@@ -14,8 +14,6 @@ class SignInVC: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    
-    
     @IBAction func onSignInTapped(_ sender: Any) {
         
         guard let email = emailTF.text,
@@ -37,12 +35,9 @@ class SignInVC: UIViewController {
             print(user.displayName ?? "MISSING DISPLAY NAME")
             print(user.uid)
             
-            self.performSegue(withIdentifier: "signInSegue", sender: nil)
-            
-            
+            if email.range(of:"owner.com") != nil {
+                self.performSegue(withIdentifier: "ownerSignInSegue", sender: nil)
+            }
         })
-        
     }
-    
 }
-
