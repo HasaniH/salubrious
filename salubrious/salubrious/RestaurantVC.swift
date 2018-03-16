@@ -1,15 +1,15 @@
 //
 //  SignOutVC.swift
-//  salubrious
+//  Kilo Loco Firebase Email
 //
-//  Created by Hasani Hendrix on 3/15/18.
-//  Copyright © 2018 Hasani Hendrix. All rights reserved.
+//  Created by Kyle Lee on 5/7/17.
+//  Copyright © 2017 Kyle Lee. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class SignOutVC: UIViewController {
+class RestaurantVC: UIViewController {
     
     
     @IBOutlet weak var label: UILabel!

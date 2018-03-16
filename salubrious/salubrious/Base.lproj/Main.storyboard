@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17D47" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="170.40000000000001" y="839.73013493253382"/>
         </scene>
-        <!--Sign OutVC-->
+        <!--RestaurantVC-->
         <scene sceneID="dh8-1t-N2y">
             <objects>
-                <viewController id="WTi-Zg-NuO" customClass="SignOutVC" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WTi-Zg-NuO" customClass="RestaurantVC" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L9c-fG-Pdg"/>
                         <viewControllerLayoutGuide type="bottom" id="RBD-rY-0V7"/>
@@ -182,7 +182,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y2S-nP-PA2"/>
+        <segue reference="f9F-jW-L2h"/>
         <segue reference="61r-Rb-fvG"/>
     </inferredMetricsTieBreakers>
 </document>
