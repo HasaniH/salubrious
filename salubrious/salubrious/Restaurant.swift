@@ -12,14 +12,16 @@ import FirebaseDatabase
 struct Restaurant {
     
     let key:String!
+    let Neighborhood:String!
     let Address:String!
     let Name:String!
     let Phone:String!
     let Website:String!
     let itemRef:DatabaseReference?
     
-    init(Address:String, Name:String, Phone:String, Website:String, key:String = "") {
+    init(Neighborhood:String, Address:String, Name:String, Phone:String, Website:String, key:String = "") {
         self.key = key
+        self.Neighborhood = Neighborhood
         self.Address = Address
         self.Name = Name
         self.Phone = Phone
@@ -31,6 +33,12 @@ struct Restaurant {
         key = snapshot.key
         itemRef = snapshot.ref
         let value = snapshot.value as? NSDictionary
+        
+        if let restaurantNeighborhood = value!["Neighborhood"] as? String {
+            Neighborhood = restaurantNeighborhood
+        } else {
+            Neighborhood = ""
+        }
         
         if let restaurantAddress = value!["Address"] as? String {
             Address = restaurantAddress

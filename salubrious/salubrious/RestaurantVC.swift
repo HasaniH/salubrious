@@ -18,7 +18,7 @@ class RestaurantsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dbRef = Database.database().reference().child("Neighborhoods").child("Owner-added")
+        dbRef = Database.database().reference().child("Neighborhoods")
         
         guard (Auth.auth().currentUser?.displayName) != nil else { return }
         
@@ -28,6 +28,10 @@ class RestaurantsVC: UIViewController {
     @IBAction func addRestaurant(_ sender: Any) {
         let userID = Auth.auth().currentUser?.displayName
         let restaurantAlert = UIAlertController(title: "New Restaurant", message: "Enter your restaurant information: ", preferredStyle: .alert)
+        restaurantAlert.addTextField { (textField:UITextField) in
+            textField.placeholder = "Neighborhood"
+        }
+        
         restaurantAlert.addTextField { (textField:UITextField) in
             textField.placeholder = "Address"
         }
@@ -45,17 +49,18 @@ class RestaurantsVC: UIViewController {
         }
         
         restaurantAlert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (action:UIAlertAction) in
-            let address = restaurantAlert.textFields![0] as UITextField
-            let name = restaurantAlert.textFields![1] as UITextField
-            let phone = restaurantAlert.textFields![2] as UITextField
-            let website = restaurantAlert.textFields![3] as UITextField
+            let neighborhood = restaurantAlert.textFields![0] as UITextField
+            let address = restaurantAlert.textFields![1] as UITextField
+            let name = restaurantAlert.textFields![2] as UITextField
+            let phone = restaurantAlert.textFields![3] as UITextField
+            let website = restaurantAlert.textFields![4] as UITextField
             
             if address.text != "", name.text != "", phone.text != "", website.text != "" {
-                let restaurant = Restaurant(Address: address.text!, Name: name.text!, Phone: phone.text!, Website: website.text!)
+                let restaurant = Restaurant(Neighborhood: neighborhood.text!, Address: address.text!, Name: name.text!, Phone: phone.text!, Website: website.text!)
                 
-                let restaurantRef = self.dbRef.child((name.text?.lowercased())!)
+                let restaurantRef = self.dbRef.child(neighborhood.text!)
                 
-                restaurantRef.setValue(restaurant.toAnyObject())
+                restaurantRef.updateChildValues(restaurant.toAnyObject() as! [AnyHashable : Any])
             }
         }))
         

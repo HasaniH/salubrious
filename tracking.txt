@@ -51,3 +51,11 @@ Right now I do not allow the user to enter their personal email and password so 
 
 (2/25/2018)
 Had trouble setting up the login view controller. Spent an hour debugging and I found out that my class for the controller was inheriting a TableViewController and not a view controller which was the reason for the errors. Fixed it and now I have a login view for the app. Will have to work on setting up the feature for logging in a user vs creating a new user.
+
+(3/10/18)
+Had trouble sending user email and password to firebase but after many trial and errors I got it to work. Since I am working on getting a functional app working I have set it up in a way easy to manage. User can now sign in and sign out. Next I will need to work on making sure only a owner can add a restaurant. I will do this once I learn to create separate views depending on the user's email. Next steps will be:
+
+- Have app update database correctly with unique ids as child nodes
+- Separate view for owner user and regular user
+- Read database and show neighborhoods with restaurants in a elegant fashion
+- Ng suggested finishing touches
