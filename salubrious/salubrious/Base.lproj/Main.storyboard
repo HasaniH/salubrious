@@ -172,7 +172,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="add" id="YSE-U0-ObM"/>
+                        <barButtonItem systemItem="add" id="YSE-U0-ObM">
+                            <connections>
+                                <action selector="addRestaurant:" destination="WTi-Zg-NuO" id="bKr-OE-orW"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
