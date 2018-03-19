@@ -59,3 +59,6 @@ Had trouble sending user email and password to firebase but after many trial and
 - Separate view for owner user and regular user
 - Read database and show neighborhoods with restaurants in a elegant fashion
 - Ng suggested finishing touches
+
+(3/18/18)
+I have added unique ids for each restaurant added, that way we can consistently update the database. I have figured out a way to have different views so now I will need to read the data from the database and the app will be very close to complete.
