@@ -12,14 +12,20 @@ import FirebaseDatabase
 struct Restaurant {
     
     let key:String!
-    let content:String!
-    let addedByUser:String!
+    let Neighborhood:String!
+    let Address:String!
+    let Name:String!
+    let Phone:String!
+    let Website:String!
     let itemRef:DatabaseReference?
     
-    init(content:String, addedByUser:String, key:String = "") {
+    init(Neighborhood:String, Address:String, Name:String, Phone:String, Website:String, key:String = "") {
         self.key = key
-        self.content = content
-        self.addedByUser = addedByUser
+        self.Neighborhood = Neighborhood
+        self.Address = Address
+        self.Name = Name
+        self.Phone = Phone
+        self.Website = Website
         self.itemRef = nil
     }
     
@@ -28,20 +34,38 @@ struct Restaurant {
         itemRef = snapshot.ref
         let value = snapshot.value as? NSDictionary
         
-        if let restaurantContent = value!["content"] as? String {
-            content = restaurantContent
+        if let restaurantNeighborhood = value!["Neighborhood"] as? String {
+            Neighborhood = restaurantNeighborhood
         } else {
-            content = ""
+            Neighborhood = ""
         }
         
-        if let restaurantUser = value!["addedByUser"] as? String {
-            addedByUser = restaurantUser
+        if let restaurantAddress = value!["Address"] as? String {
+            Address = restaurantAddress
         } else {
-            addedByUser = ""
+            Address = ""
+        }
+        
+        if let restaurantName = value!["Name"] as? String {
+            Name = restaurantName
+        } else {
+            Name = ""
+        }
+        
+        if let restaurantPhone = value!["Phone"] as? String {
+            Phone = restaurantPhone
+        } else {
+            Phone = ""
+        }
+        
+        if let restaurantWebsite = value!["Website"] as? String {
+            Website = restaurantWebsite
+        } else {
+            Website = ""
         }
     }
     
     func toAnyObject() -> AnyObject {
-        return ["content":content, "addedByUser":addedByUser] as NSDictionary
+        return ["Address":Address, "Name":Name, "Phone":Phone, "Website": Website] as NSDictionary
     }
 }

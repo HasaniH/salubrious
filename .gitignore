@@ -31,3 +31,4 @@ Thumbs.db
 /exec -l /
 /GoogleService-Info.plist
 /google-cloud-sdk/
+/example/
