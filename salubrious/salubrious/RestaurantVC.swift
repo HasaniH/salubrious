@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class RestaurantsVC: UIViewController {
+class RestaurantVC: UIViewController {
     
     var dbRef:DatabaseReference!
     
@@ -54,10 +54,12 @@ class RestaurantsVC: UIViewController {
             let phone = restaurantAlert.textFields![3] as UITextField
             let website = restaurantAlert.textFields![4] as UITextField
             
+            
             if address.text != "", name.text != "", phone.text != "", website.text != "" {
-                let restaurant = Restaurant(Neighborhood: neighborhood.text!, Address: address.text!, Name: name.text!, Phone: phone.text!, Website: website.text!)
+                let key = self.dbRef.childByAutoId().key
+                let restaurant = Restaurant(Neighborhood: neighborhood.text!, Address: address.text!, Name: name.text!, Phone: phone.text!, Website: website.text!, key: key)
                 
-                let restaurantRef = self.dbRef.child(neighborhood.text!)
+                let restaurantRef = self.dbRef.child(neighborhood.text!).child(key)
                 
                 restaurantRef.updateChildValues(restaurant.toAnyObject() as! [AnyHashable : Any])
             }

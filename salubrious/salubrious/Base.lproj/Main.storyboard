@@ -69,6 +69,7 @@
                         <outlet property="emailTF" destination="98d-X5-o1E" id="dwg-EG-3h5"/>
                         <outlet property="passwordTF" destination="dKT-qQ-nHk" id="vOg-pe-6Ko"/>
                         <segue destination="WTi-Zg-NuO" kind="show" identifier="ownerSignInSegue" id="61r-Rb-fvG"/>
+                        <segue destination="2ZR-UF-eE4" kind="showDetail" identifier="example" id="Xzy-aL-kAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="170.40000000000001" y="839.73013493253382"/>
         </scene>
-        <!--RestaurantsVC-->
+        <!--RestaurantVC-->
         <scene sceneID="dh8-1t-N2y">
             <objects>
-                <viewController id="WTi-Zg-NuO" customClass="RestaurantsVC" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WTi-Zg-NuO" customClass="RestaurantVC" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L9c-fG-Pdg"/>
                         <viewControllerLayoutGuide type="bottom" id="RBD-rY-0V7"/>
@@ -174,7 +175,7 @@
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-t6-YPy">
-                                <rect key="frame" x="116" y="129" width="142" height="74"/>
+                                <rect key="frame" x="116" y="573" width="142" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="1" green="0.37706552090000001" blue="0.41129301219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,9 +195,88 @@
             </objects>
             <point key="canvasLocation" x="1237.5999999999999" y="393.55322338830587"/>
         </scene>
+        <!--RestaurantsVC-->
+        <scene sceneID="vE5-KK-Ksd">
+            <objects>
+                <viewController id="2ZR-UF-eE4" customClass="RestaurantsVC" customModule="salubrious" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JjE-o6-Bg6"/>
+                        <viewControllerLayoutGuide type="bottom" id="kpb-Te-Cae"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KjM-WE-GaO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Neighborhood" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gkn-Xm-Whg">
+                                <rect key="frame" x="16" y="67" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4D-sq-VKX">
+                                <rect key="frame" x="16" y="116" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ie3-Ds-HZG">
+                                <rect key="frame" x="16" y="167" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-cp-IMK">
+                                <rect key="frame" x="16" y="222" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9F-cA-5cC">
+                                <rect key="frame" x="16" y="275" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-g8-siK">
+                                <rect key="frame" x="16" y="343" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Restaurant">
+                                    <color key="titleColor" red="1" green="0.37706552090000001" blue="0.41129301219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAddRestaurant:" destination="2ZR-UF-eE4" eventType="touchUpInside" id="d7P-d4-43A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgK-V6-UpK">
+                                <rect key="frame" x="16" y="381" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelMessage" destination="jgK-V6-UpK" id="Lys-hz-Kdg"/>
+                        <outlet property="textFieldAddress" destination="E4D-sq-VKX" id="m4r-vy-x3f"/>
+                        <outlet property="textFieldName" destination="ie3-Ds-HZG" id="09L-s1-nBt"/>
+                        <outlet property="textFieldNeighborhood" destination="Gkn-Xm-Whg" id="shE-cb-F3o"/>
+                        <outlet property="textFieldPhone" destination="M9F-cA-5cC" id="yVQ-bt-KEc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDg-Bw-usu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="182"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y2S-nP-PA2"/>
         <segue reference="61r-Rb-fvG"/>
+        <segue reference="f9F-jW-L2h"/>
     </inferredMetricsTieBreakers>
 </document>
