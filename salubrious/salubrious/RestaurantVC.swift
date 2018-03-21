@@ -39,7 +39,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dbRef = Database.database().reference().child("Neighborhoods")
+        dbRef = Database.database().reference().child("Neighborhoods").child("Buckhead")
         
         guard (Auth.auth().currentUser?.displayName) != nil else { return }
         
@@ -49,7 +49,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 
                 for restaurants in snapshot.children.allObjects as! [DataSnapshot] {
                     let restaurantObject = restaurants.value as? [String: AnyObject]
-                    let restaurantNeighborhood = restaurantObject?["Neighborhood"]
+                    let restaurantNeighborhood = restaurantObject?["Buckhead"]
                     let restaurantName = restaurantObject?["Name"]
                     let restaurantPhone = restaurantObject?["Phone"]
                     let restaurantAddress = restaurantObject?["Address"]
