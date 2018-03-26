@@ -12,15 +12,17 @@ import FirebaseAuth
 
 class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var dbRef:DatabaseReference!
+    var handle:DatabaseHandle!
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var tableRestaurants: UITableView!
     
     var restaurantList = [Restaurant]()
+    let myarray = ["item1", "item2", "item3", "item4"]
+    let dbRef = Database.database().reference().child("Neighborhoods")
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.count
+        return self.restaurantList.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,36 +36,63 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.labelPhone.text = restaurant.Phone
         cell.labelAddress.text = restaurant.Address
         
+        
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dbRef = Database.database().reference().child("Neighborhoods").child("Buckhead")
-        
-        guard (Auth.auth().currentUser?.displayName) != nil else { return }
-        
-        dbRef.observe(DataEventType.value, with: {(snapshot) in
-            if (snapshot.childrenCount > 0) {
-                self.restaurantList.removeAll()
+        retrieveRestaurants()
+    }
+    
+    func retrieveRestaurants(){
+        dbRef.observe(.childAdded, with: {
+            (snapshot) in
+            
+            
+            if (snapshot.value as? [String:AnyObject]) != nil {
                 
-                for restaurants in snapshot.children.allObjects as! [DataSnapshot] {
-                    let restaurantObject = restaurants.value as? [String: AnyObject]
-                    let restaurantNeighborhood = restaurantObject?["Buckhead"]
-                    let restaurantName = restaurantObject?["Name"]
-                    let restaurantPhone = restaurantObject?["Phone"]
-                    let restaurantAddress = restaurantObject?["Address"]
-                    let restaurantWebsite = restaurantObject?["Website"]
-                    let restaurantId = restaurantObject?["id"]
+                
+                let dictionary = snapshot.value as! NSDictionary
+                
+                var address:String = ""
+                var name:String = ""
+                var phone:String = ""
+                var website: String = ""
+                
+                
+                for (keyString, value) in dictionary {
+                    let valueDict = value as! NSDictionary
+                    var count = 0
                     
-                    let restaurant = Restaurant(Neighborhood: restaurantNeighborhood as! String, Address: restaurantAddress as! String, Name: restaurantName as! String, Phone: restaurantPhone as! String, Website: restaurantWebsite as! String, key: restaurantId as! String)
-                    
+                    for (key, value) in valueDict {
+                        print("Value: \(value) for key: \(key)")
+                        switch count {
+                        case 0:
+                            address = value as! String
+                        case 1:
+                            name = value as! String
+                        case 2:
+                            phone = value as! String
+                        case 3:
+                            website = value as! String
+                        default: break
+                        }
+                        count += 1
+                    }
+                    let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, key: keyString as! String)
                     self.restaurantList.append(restaurant)
                 }
                 
-                self.tableRestaurants.reloadData()
+                                
+                //elf.restaurantList.append(restaurant)
+                DispatchQueue.main.async(execute: {
+                    self.tableRestaurants.reloadData()
+                })
             }
         })
+        self.tableRestaurants.delegate = self
+        self.tableRestaurants.dataSource = self
     }
     
     @IBAction func addRestaurant(_ sender: Any) {

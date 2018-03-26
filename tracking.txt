@@ -62,3 +62,6 @@ Had trouble sending user email and password to firebase but after many trial and
 
 (3/18/18)
 I have added unique ids for each restaurant added, that way we can consistently update the database. I have figured out a way to have different views so now I will need to read the data from the database and the app will be very close to complete.
+
+(3/25/18)
+After a long 6 hours of work to discover how to debug in xcode with ios and how to iterate through a NS dictionary. I had to redesign the way my database was structured and also figure out how to display the data read from the database to my application. I finally figured out from print statments and debugging how to access the content in from the database. It involved me using to forloops because inside the NSDictionary, the value was another NSDictionary
