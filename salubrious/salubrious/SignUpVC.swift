@@ -48,7 +48,9 @@ class SignUpVC: UIViewController {
                 }
                 if email.range(of:"owner.com") != nil {
                     self.performSegue(withIdentifier: "ownerSignUpSegue", sender: nil)
-                } 
+                } else {
+                    self.performSegue(withIdentifier: "userSignUpSegue", sender: nil)
+                }
             })
         })
     }

@@ -37,6 +37,8 @@ class SignInVC: UIViewController {
             
             if email.range(of:"owner.com") != nil {
                 self.performSegue(withIdentifier: "ownerSignInSegue", sender: nil)
+            } else {
+                self.performSegue(withIdentifier: "userSignUpSegue", sender: nil)
             }
         })
     }
