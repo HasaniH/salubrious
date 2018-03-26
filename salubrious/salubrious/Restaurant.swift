@@ -34,7 +34,9 @@ struct Restaurant {
         itemRef = snapshot.ref
         let value = snapshot.value as? NSDictionary
         
-        if let restaurantNeighborhood = value!["Neighborhood"] as? String {
+        
+        
+        if let restaurantNeighborhood = value!["value"] as? String {
             Neighborhood = restaurantNeighborhood
         } else {
             Neighborhood = ""
@@ -66,6 +68,6 @@ struct Restaurant {
     }
     
     func toAnyObject() -> AnyObject {
-        return ["Address":Address, "Name":Name, "Phone":Phone, "Website": Website] as NSDictionary
+        return ["Address":Address, "Name":Name, "Phone":Phone, "Website": Website, "id": key] as NSDictionary
     }
 }
