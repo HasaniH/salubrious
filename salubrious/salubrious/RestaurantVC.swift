@@ -18,7 +18,6 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var tableRestaurants: UITableView!
     
     var restaurantList = [Restaurant]()
-    let myarray = ["item1", "item2", "item3", "item4"]
     let dbRef = Database.database().reference().child("Neighborhoods")
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,8 +34,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.labelName.text = restaurant.Name
         cell.labelPhone.text = restaurant.Phone
         cell.labelAddress.text = restaurant.Address
-        
-        
+    
         return cell
     }
     
@@ -49,10 +47,8 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         dbRef.observe(.childAdded, with: {
             (snapshot) in
             
-            
             if (snapshot.value as? [String:AnyObject]) != nil {
-                
-                
+                                
                 let dictionary = snapshot.value as! NSDictionary
                 
                 var address:String = ""
@@ -65,8 +61,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                     let valueDict = value as! NSDictionary
                     var count = 0
                     
-                    for (key, value) in valueDict {
-                        print("Value: \(value) for key: \(key)")
+                    for (_, value) in valueDict {
                         switch count {
                         case 0:
                             address = value as! String
@@ -83,10 +78,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                     let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, key: keyString as! String)
                     self.restaurantList.append(restaurant)
                 }
-                
-                                
-                //elf.restaurantList.append(restaurant)
-                DispatchQueue.main.async(execute: {
+                    DispatchQueue.main.async(execute: {
                     self.tableRestaurants.reloadData()
                 })
             }
@@ -139,7 +131,6 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 return
             }
         }))
-        
         self.present(restaurantAlert, animated:true, completion: nil)
     }
     

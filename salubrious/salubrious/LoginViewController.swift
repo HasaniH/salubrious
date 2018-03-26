@@ -32,8 +32,6 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         // TODO: Do some form of email and password validation
         if let email = emailTextField.text, let pass = passwordTextField.text {
