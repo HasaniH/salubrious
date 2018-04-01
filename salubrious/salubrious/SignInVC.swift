@@ -34,12 +34,7 @@ class SignInVC: UIViewController {
             print(user.email ?? "MISSING EMAIL")
             print(user.displayName ?? "MISSING DISPLAY NAME")
             print(user.uid)
-            
-            if email.range(of:"owner.com") != nil {
-                self.performSegue(withIdentifier: "ownerSignInSegue", sender: nil)
-            } else {
-                self.performSegue(withIdentifier: "userSignUpSegue", sender: nil)
-            }
+            self.performSegue(withIdentifier: "loginSegue", sender: nil)
         })
     }
 }

@@ -17,15 +17,17 @@ struct Restaurant {
     let Name:String!
     let Phone:String!
     let Website:String!
+    let User:String!
     let itemRef:DatabaseReference?
     
-    init(Neighborhood:String, Address:String, Name:String, Phone:String, Website:String, key:String = "") {
+    init(Neighborhood:String, Address:String, Name:String, Phone:String, Website:String, User: String, key:String = "") {
         self.key = key
         self.Neighborhood = Neighborhood
         self.Address = Address
         self.Name = Name
         self.Phone = Phone
         self.Website = Website
+        self.User = User
         self.itemRef = nil
     }
     
@@ -65,9 +67,15 @@ struct Restaurant {
         } else {
             Website = ""
         }
+        
+        if let restaurantUser = value!["User"] as? String {
+            User = restaurantUser
+        } else {
+            User = ""
+        }
     }
     
     func toAnyObject() -> AnyObject {
-        return ["Address":Address, "Name":Name, "Phone":Phone, "Website": Website, "id": key] as NSDictionary
+        return ["Address":Address, "Name":Name, "Phone":Phone, "Website": Website, "Added By": User, "id": key] as NSDictionary
     }
 }

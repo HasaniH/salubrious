@@ -46,11 +46,7 @@ class SignUpVC: UIViewController {
                     AlertController.showAlert(self, title: "Error", message: error!.localizedDescription)
                     return
                 }
-                if email.range(of:"owner.com") != nil {
-                    self.performSegue(withIdentifier: "ownerSignUpSegue", sender: nil)
-                } else {
-                    self.performSegue(withIdentifier: "userSignUpSegue", sender: nil)
-                }
+                self.performSegue(withIdentifier: "registerSegue", sender: nil)
             })
         })
     }

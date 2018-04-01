@@ -13,11 +13,10 @@ import FirebaseAuth
 class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var handle:DatabaseHandle!
-    
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var tableRestaurants: UITableView!
-    
+    var tableRestaurants: UITableView!
     var restaurantList = [Restaurant]()
+    
+    let userID = Auth.auth().currentUser?.displayName
     let dbRef = Database.database().reference().child("Neighborhoods")
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,6 +54,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 var name:String = ""
                 var phone:String = ""
                 var website: String = ""
+                var user: String = ""
                 
                 
                 for (keyString, value) in dictionary {
@@ -70,13 +70,17 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                         case 2:
                             phone = value as! String
                         case 3:
+                            user = value as! String
+                        case 4:
                             website = value as! String
                         default: break
                         }
                         count += 1
                     }
-                    let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, key: keyString as! String)
-                    self.restaurantList.append(restaurant)
+                    if user == self.userID {
+                        let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, User: self.userID!, key: keyString as! String)
+                        self.restaurantList.append(restaurant)
+                    }
                 }
                     DispatchQueue.main.async(execute: {
                     self.tableRestaurants.reloadData()
@@ -88,43 +92,46 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     @IBAction func addRestaurant(_ sender: Any) {
-        let userID = Auth.auth().currentUser?.displayName
-        let restaurantAlert = UIAlertController(title: "New Restaurant", message: "Enter your restaurant information: ", preferredStyle: .alert)
-        restaurantAlert.addTextField { (textField:UITextField) in
-            textField.placeholder = "Neighborhood"
-        }
         
-        restaurantAlert.addTextField { (textField:UITextField) in
-            textField.placeholder = "Address"
-        }
+        if Auth.auth().currentUser?.email?.range(of:"owner.com") == nil {
+            AlertController.showAlert(self, title: "Not Accessible", message: "You are not an authenticated owner.")
+            return
+        } else {
         
-        restaurantAlert.addTextField { (textField:UITextField) in
-            textField.placeholder = "Name"
-        }
+            let restaurantAlert = UIAlertController(title: "New Restaurant", message: "Enter your restaurant information: ", preferredStyle: .alert)
+            restaurantAlert.addTextField { (textField:UITextField) in
+                textField.placeholder = "Neighborhood"
+            }
         
-        restaurantAlert.addTextField { (textField:UITextField) in
-            textField.placeholder = "Phone"
-        }
+            restaurantAlert.addTextField { (textField:UITextField) in
+                textField.placeholder = "Address"
+            }
         
-        restaurantAlert.addTextField { (textField:UITextField) in
-            textField.placeholder = "Website"
-        }
+            restaurantAlert.addTextField { (textField:UITextField) in
+                textField.placeholder = "Name"
+            }
         
-        restaurantAlert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (action:UIAlertAction) in
-            let neighborhood = restaurantAlert.textFields![0] as UITextField
-            let address = restaurantAlert.textFields![1] as UITextField
-            let name = restaurantAlert.textFields![2] as UITextField
-            let phone = restaurantAlert.textFields![3] as UITextField
-            let website = restaurantAlert.textFields![4] as UITextField
+            restaurantAlert.addTextField { (textField:UITextField) in
+                textField.placeholder = "Phone"
+            }
+        
+            restaurantAlert.addTextField { (textField:UITextField) in
+                textField.placeholder = "Website"
+            }
+        
+            restaurantAlert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (action:UIAlertAction) in
+                let neighborhood = restaurantAlert.textFields![0] as UITextField
+                let address = restaurantAlert.textFields![1] as UITextField
+                let name = restaurantAlert.textFields![2] as UITextField
+                let phone = restaurantAlert.textFields![3] as UITextField
+                let website = restaurantAlert.textFields![4] as UITextField
             
-            
-            if address.text != "", name.text != "", phone.text != "", website.text != "" {
-                let key = self.dbRef.childByAutoId().key
-                let newRestaurant = Restaurant(Neighborhood: neighborhood.text!, Address: address.text!, Name: name.text!, Phone: phone.text!, Website: website.text!, key: key)
+                if address.text != "", name.text != "", phone.text != "", website.text != "" {
+                    let key = self.dbRef.childByAutoId().key
+                    let newRestaurant = Restaurant(Neighborhood: neighborhood.text!, Address: address.text!, Name:  name.text!, Phone: phone.text!, Website: website.text!, User: self.userID!, key: key)
+                    let restaurantRef = self.dbRef.child(neighborhood.text!).child(key)
                 
-                let restaurantRef = self.dbRef.child(neighborhood.text!).child(key)
-                
-                restaurantRef.updateChildValues(newRestaurant.toAnyObject() as! [AnyHashable : Any])
+                    restaurantRef.updateChildValues(newRestaurant.toAnyObject() as! [AnyHashable : Any])
             }
             else {
                 AlertController.showAlert(self, title: "Missing Info", message: "Please fill out all fields")
@@ -132,6 +139,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             }
         }))
         self.present(restaurantAlert, animated:true, completion: nil)
+        }
     }
     
     @IBAction func onSignOutTapped(_ sender: Any) {
