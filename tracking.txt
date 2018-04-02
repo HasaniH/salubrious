@@ -65,3 +65,13 @@ I have added unique ids for each restaurant added, that way we can consistently 
 
 (3/25/18)
 After a long 6 hours of work to discover how to debug in xcode with ios and how to iterate through a NS dictionary. I had to redesign the way my database was structured and also figure out how to display the data read from the database to my application. I finally figured out from print statments and debugging how to access the content in from the database. It involved me using to forloops because inside the NSDictionary, the value was another NSDictionary
+
+(4/1/18)
+Today I spent a good time figuring out how to create a seperate view for the user that has the same functionality as the owner view just without the add sign. As simple as it may seem, I ran into many errors and figured I would just use the same view but block the user from using the add functionality. 
+After this I also added functionality that allowed the owner to see only restaurants that they have added and the user can see all the restaurants. Next I will figure out how to filter, update and delete the data for the client. 
+
+Ideas on how to update:	Allow the owner to click on the restaurant and go to a separate view where they can update the values of that restaurant and it will update the database. Upon this, they will be directed back to the last view and there will also need to be a button that allows them to go back to the last view.
+
+Ideas on how to delete:	Look into how to do the swipe/delete function and just remove it from the database from this. 
+
+Ideas on how to filter:	Collect a list of all the neighborhoods and have a button with different neighborhoods and when clicked, displays the list of the restaurants in that neighborhood.

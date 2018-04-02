@@ -36,8 +36,6 @@ struct Restaurant {
         itemRef = snapshot.ref
         let value = snapshot.value as? NSDictionary
         
-        
-        
         if let restaurantNeighborhood = value!["value"] as? String {
             Neighborhood = restaurantNeighborhood
         } else {

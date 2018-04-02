@@ -15,6 +15,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     var handle:DatabaseHandle!
     var tableRestaurants: UITableView!
     var restaurantList = [Restaurant]()
+    var tableIndex = 0
     
     let userID = Auth.auth().currentUser?.displayName
     let dbRef = Database.database().reference().child("Neighborhoods")
@@ -35,6 +36,11 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         cell.labelAddress.text = restaurant.Address
     
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableIndex = indexPath.row
+        print(restaurantList[tableIndex].Address)
     }
     
     override func viewDidLoad() {
@@ -77,9 +83,15 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                         }
                         count += 1
                     }
-                    if user == self.userID {
-                        let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, User: self.userID!, key: keyString as! String)
+                    if Auth.auth().currentUser?.email?.range(of:"owner.com") == nil {
+                        let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, User: user, key: keyString as! String)
                         self.restaurantList.append(restaurant)
+                    }
+                    else {
+                        if user == self.userID {
+                            let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, User: user, key: keyString as! String)
+                            self.restaurantList.append(restaurant)
+                        }
                     }
                 }
                     DispatchQueue.main.async(execute: {
