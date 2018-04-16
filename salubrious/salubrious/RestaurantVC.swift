@@ -41,7 +41,13 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableIndex = indexPath.row
-        print(restaurantList[tableIndex].Address)
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? NeighborhoodVC {
+            destination.neighborhood = neighborhoods[restaurantList[(tableRestaurants.indexPathForSelectedRow?.row)!].Neighborhood]
+        }
     }
     
     override func viewDidLoad() {
