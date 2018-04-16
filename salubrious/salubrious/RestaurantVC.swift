@@ -15,6 +15,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     var handle:DatabaseHandle!
     var tableRestaurants: UITableView!
     var restaurantList = [Restaurant]()
+    var neighborhoods = [String: [NeighborhoodDetails]]()
     var tableIndex = 0
     
     let userID = Auth.auth().currentUser?.displayName
@@ -31,9 +32,9 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         restaurant = restaurantList[indexPath.row]
         cell.labelNeighborhood.text = restaurant.Neighborhood
-        cell.labelName.text = restaurant.Name
-        cell.labelPhone.text = restaurant.Phone
-        cell.labelAddress.text = restaurant.Address
+        cell.labelName.text = ""
+        cell.labelPhone.text = ""
+        cell.labelAddress.text = ""
     
         return cell
     }
@@ -83,14 +84,31 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                         }
                         count += 1
                     }
+                    
+                    let details = NeighborhoodDetails(Address: address, Name: name, Phone: phone, Website: website)
+                    
                     if Auth.auth().currentUser?.email?.range(of:"owner.com") == nil {
                         let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, User: user, key: keyString as! String)
-                        self.restaurantList.append(restaurant)
+                        
+                        let keyExists = self.neighborhoods.keys.contains(restaurant.Neighborhood)
+                        if !keyExists {
+                            self.restaurantList.append(restaurant)
+                            self.neighborhoods[restaurant.Neighborhood] = [details]
+                        } else {
+                            self.neighborhoods[restaurant.Neighborhood]?.append(details)
+                        }
                     }
                     else {
                         if user == self.userID {
                             let restaurant = Restaurant(Neighborhood: snapshot.key, Address: address, Name: name, Phone: phone, Website: website, User: user, key: keyString as! String)
-                            self.restaurantList.append(restaurant)
+                            
+                            let keyExists = self.neighborhoods.keys.contains(restaurant.Neighborhood)
+                            if !keyExists {
+                                self.restaurantList.append(restaurant)
+                                self.neighborhoods[restaurant.Neighborhood] = [details]
+                            } else {
+                                self.neighborhoods[restaurant.Neighborhood]?.append(details)
+                            }
                         }
                     }
                 }
