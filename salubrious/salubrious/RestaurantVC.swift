@@ -32,9 +32,6 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         restaurant = restaurantList[indexPath.row]
         cell.labelNeighborhood.text = restaurant.Neighborhood
-        cell.labelName.text = ""
-        cell.labelPhone.text = ""
-        cell.labelAddress.text = ""
     
         return cell
     }
@@ -46,7 +43,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? NeighborhoodVC {
-            destination.neighborhood = neighborhoods[restaurantList[(tableRestaurants.indexPathForSelectedRow?.row)!].Neighborhood]
+            destination.neighborhoodList = neighborhoods[restaurantList[(tableRestaurants.indexPathForSelectedRow?.row)!].Neighborhood]
         }
     }
     
