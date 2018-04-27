@@ -46,6 +46,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         let updateAction = UIAlertAction(title: "Update", style: .default) { (_) in
             let id = restaurant.key
+            let neighborhood = restaurant.Neighborhood
             
             let name = alertController.textFields![0] as UITextField
             let address = alertController.textFields![1] as UITextField
@@ -53,11 +54,14 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             let website = alertController.textFields![3] as UITextField
             let zip = alertController.textFields![4] as UITextField
             
-            self.updateRestaurant(id: id!, name: name.text!, address: address.text!, phone: phone.text!, website: website.text!, zip: zip.text!)
+            self.updateRestaurant(id: id!, name: name.text!, address: address.text!, phone: phone.text!, website: website.text!, zip: zip.text!, neighborhood: neighborhood!)
         }
             
         let deleteAction = UIAlertAction(title: "Delete", style: .default) { (_) in
+            let id = restaurant.key
+            let neighborhood = restaurant.Neighborhood
             
+            self.deleteRestaurant(id: id!, neighborhood: neighborhood!)
         }
         
         let segueAction = UIAlertAction(title: "See Restaurants", style: .default) { (_) in
@@ -92,16 +96,14 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
     }
     
-    func updateRestaurant(id: String, name: String, address: String, phone: String, website: String, zip: String) {
-        let restaurant = [
-        "address": address,
-        "name": name,
-        "phone": phone,
-        "website": website,
-        "Zip-Code": zip
-        ]
+    func updateRestaurant(id: String, name: String, address: String, phone: String, website: String, zip: String, neighborhood: String) {
+        let restaurant = Restaurant(Neighborhood: neighborhood, Address: address, Name: name, Phone: phone, Website: website, Zip: zip, User: self.userID!, key: id)
         
-        dbRef.child(id).setValue(restaurant)
+        dbRef.child(neighborhood).child(id).setValue(restaurant.toAnyObject() as! [AnyHashable : Any])
+    }
+    
+    func deleteRestaurant(id: String, neighborhood: String) {
+        dbRef.child(neighborhood).child(id).setValue(nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -137,25 +139,28 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 var website: String = ""
                 var zip: String = ""
                 var user: String = ""
+                var id: String = ""
                 
                 for (keyString, value) in dictionary {
                     let valueDict = value as! NSDictionary
                     var count = 0
                     
-                    for (_, value) in valueDict {
-                        switch count {
-                        case 0:
+                    for (key, value) in valueDict {
+                        switch key as! String {
+                        case "Address":
                             address = value as! String
-                        case 1:
+                        case "Name":
                             name = value as! String
-                        case 2:
+                        case "Phone":
                             phone = value as! String
-                        case 3:
+                        case "Added By":
                             user = value as! String
-                        case 4:
+                        case "Website":
                             website = value as! String
-                        case 5:
+                        case "Zip-Code":
                             zip = value as! String
+                        case "id":
+                            id = value as! String
                         default: break
                     }
                         count += 1
@@ -246,7 +251,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 
                 if address.text != "", name.text != "", phone.text != "", website.text != "" {
                     let key = self.dbRef.childByAutoId().key
-                    let newRestaurant = Restaurant(Neighborhood: neighborhood.text!, Address: address.text!, Name:  name.text!, Phone: phone.text!, Website: website.text!, Zip: zip.text!, User: self.userID!)
+                    let newRestaurant = Restaurant(Neighborhood: neighborhood.text!, Address: address.text!, Name:  name.text!, Phone: phone.text!, Website: website.text!, Zip: zip.text!, User: self.userID!, key: key)
                     let restaurantRef = self.dbRef.child(neighborhood.text!).child(key)
                     
                     restaurantRef.updateChildValues(newRestaurant.toAnyObject() as! [AnyHashable : Any])
@@ -274,10 +279,7 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     
-    @IBAction func searchNeighborhood(_ sender: Any) {
-        self.hasZip = false
-        retrieveRestaurants()
-    }
+    
     
     
     

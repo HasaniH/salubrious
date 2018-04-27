@@ -195,18 +195,6 @@
                                             <action selector="zipTapped:" destination="WTi-Zg-NuO" id="GsT-mN-yrH"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="q3D-1k-zDa">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F1x-ap-9dU">
-                                            <rect key="frame" x="227" y="7" width="142" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Neighborhood">
-                                                <color key="titleColor" red="1" green="0.37706552090000001" blue="0.41129301219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="searchNeighborhood:" destination="WTi-Zg-NuO" eventType="touchUpInside" id="gc3-4H-XtT"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-t6-YPy">
@@ -362,7 +350,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y2S-nP-PA2"/>
         <segue reference="74M-39-lAT"/>
+        <segue reference="f9F-jW-L2h"/>
     </inferredMetricsTieBreakers>
 </document>
