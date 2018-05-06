@@ -3,7 +3,8 @@
     	"Atlantic Station": {
     		"-L8TSWz83pJFIDdFrgSv": {
 			   "Name": "The Pig & The Pearl",
-			   "Address": "1380 Atlantic Ave NW Atlanta GA 30363",
+			   "Address": "1380 Atlantic Ave NW Atlanta GA",
+			   "Zip-Code": "30363",
 			   "Phone": "(404) 541-0930",
 			   "Added By": "Default",
 			   "Website": "https://www.thepigandthepearl.com/"
@@ -13,14 +14,16 @@
     	"Brookhaven": {
     		"-L8TXc4JrhKpK7GgaDZn": {
 			   "Name": "Pho Dai Loi 2",
-			   "Address": "4186 Buford Hwy NE Atlanta GA 30345",
+			   "Address": "4186 Buford Hwy NE Atlanta GA",
+			   "Zip-Code": "30345",
 			   "Phone": "(404) 633-2111",
 			   "Added By": "Default",
 			   "Website": "http://places.singleplatform.com/dai-loi-restaurant-2/menu?ref=google"
 			},
 			"-L8TXerW2rY7RsjH_JoM": {
 			   "Name": "Nam Phuong",
-			   "Address": "4051 Buford Hwy NE Atlanta GA 30345",
+			   "Address": "4051 Buford Hwy NE Atlanta GA",
+			   "Zip-Code": "30345",
 			   "Phone": "(404) 633-2400",
 			   "Added By": "Default",
 			   "Website": "https://www.yelp.com/biz/nam-phuong-atlanta"
@@ -29,70 +32,80 @@
     	"Buckhead": {
     		"-L8TYMDdTFuw_Y27H1-N": {
 			    "Name": "True Food Kitchen",
-			    "Address": "3393 Peachtree Rd Atlanta GA 30326",
+			    "Address": "3393 Peachtree Rd Atlanta GA",
+			    "Zip-Code": "30326",
 			    "Phone": "(404) 481-2980",
 			    "Added By": "Default",
 			    "Website": "https://www.truefoodkitchen.com/"
   			},
   			"-L8TZKKUn_cNsOBBlhOP": {
 			    "Name": "Gusto",
-			    "Address": "1935 Peachtree Rd NE Atlanta GA 30309",
+			    "Address": "1935 Peachtree Rd NE Atlanta GA",
+			    "Zip-Code": "30309",
 			    "Phone": "(404) 352-4157",
 			    "Added By": "Default",
 			    "Website": "https://whatsyourgusto.com/"
  			 },
  			 "-L8TZNmldVTheASfv8yv": {
 			    "Name": "Café Sunflower Buckhead",
-			    "Address": "2140 Peachtree Rd Atlanta GA 30309",
+			    "Address": "2140 Peachtree Rd Atlanta GA",
+			    "Zip-Code": "30309",
 			    "Phone": "(404) 352-8859",
 			    "Added By": "Default",
 			    "Website": "http://www.cafesunflower.com/"
 			 },
 			 "-L8TZNmldVTheASfv8yv": {
 			    "Name": "SAMA Food for Balance",
-			    "Address": "56 E Andrews Dr Atlanta GA 30305",
+			    "Address": "56 E Andrews Dr Atlanta GA",
+			    "Zip-Code": "30305",
 			    "Phone": "(404) 500-3550",
 			    "Added By": "Default",
 			    "Website": "http://samafoodforbalance.com/"
 			 },
 			 "-L8TZNmldV909ASfv8yv": {
 			    "Name": "26 Thai Kitchen & Bar",
-			    "Address": "541 Main St NE Atlanta GA 30324",
+			    "Address": "541 Main St NE Atlanta GA",
+			    "Zip-Code": "30324",
 			    "Phone": "(404) 400-5995",
 			    "Added By": "Default",
 			    "Website": "http://www.26thai.com/"
 			  },
 			  "-L8TZNmldVTheASf7ys4": {
 			    "Name": "Restaurant Eugene",
-			    "Address": "2277 Peachtree Rd NE Atlanta GA 30309",
+			    "Address": "2277 Peachtree Rd NE Atlanta GA",
+			    "Zip-Code": "30309",
 			    "Phone": "(404) 355-0321",
 			    "Added By": "Default",
 			    "Website": "http://www.restauranteugene.com/"
 			  },
 			  "-L8TZNmld420eASfv8yv": {
 			    "Name": "Holeman & Finch",
-			    "Address": "2278 Peachtree Rd NE Atlanta GA 30309",
+			    "Address": "2278 Peachtree Rd NE Atlanta GA",
+			    "Zip-Code": "30309",
 			    "Phone": "(404) 948-1175",
 			    "Added By": "Default",
 			    "Website": "https://www.holeman-finch.com/"
 			  },
 			  "-L8TZNmldVThlo1Cv8yv": {
 			    "Name": "Fresh To Order",
-			    "Address": "3344 Peachtree Rd Atlanta GA 30326",
+			    "Address": "3344 Peachtree Rd Atlanta GA",
+			    "Zip-Code": "30326",
 			    "Phone": "(404) 503-9999",
 			    "Added By": "Default",
 			    "Website": "http://www.freshtoorder.com/"
 			  },
 			  "-L8TZNmldVTheASoJB2e": {
 			    "Name": "Seasons 52",
-			    "Address": "3050 Peachtree Rd NW Atlanta GA 30305",
+			    "Address": "3050 Peachtree Rd NW Atlanta GA",
+			    "Zip-Code": "30305",
 			    "Phone": "(404) 846-1552",
 			    "Added By": "Default",
 			    "Website": "http://www.seasons52.com/home"
 			  },
 			  "-L8TZNmldVTheASf7UR6": {
 			    "Name": "Zoës Kitchen",
-			    "Address": "2333-A Peachtree Rd NE Atlanta GA 30305",
+			    "Address": "2333-A Peachtree Rd NE Atlanta GA",
+			    "Zip-Code": "30305",
 			    "Phone": "(404) 233-9637",
 			    "Added By": "Default",
 			    "Website": "https://zoeskitchen.com/"
@@ -102,7 +115,8 @@
     	"Chamblee": {
     		"-L8TZNmldVTheASfGDy4": {
 			   "Name": "Harmony Vegetarian Restaurant",
-			   "Address": "4897 Buford Hwy Atlanta GA 30341",
+			   "Address": "4897 Buford Hwy Atlanta GA",
+			   "Zip-Code": "30341",
 			   "Phone": "(770) 457-7288",
 			   "Added By": "Default",
 			   "Website": "http://www.harmonyvegetarian.com/"
@@ -112,21 +126,24 @@
     	"Decatur": {
     		"-L8TZNmldVTh6Txfv8yv": {
 			   "Name": "Desta Ethiopian Kitchen",
-			   "Address": "3086 Briarcliff Rd NE Atlanta GA 30329",
+			   "Address": "3086 Briarcliff Rd NE Atlanta GA",
+			   "Zip-Code": "30329",
 			   "Phone": "(404) 929-0011",
 			   "Added By": "Default",
 			   "Website": "http://www.destaethiopiankitchen.com/"
 			},
 			"-L8TZNmldVTheASf0wQm": {
 			   "Name": "Go Vegetarian Restaurant",
-			   "Address": "2179 Lawrenceville Hwy Decatur GA 30033",
+			   "Address": "2179 Lawrenceville Hwy Decatur GA",
+			   "Zip-Code": "30033",
 			   "Phone": "(404) 481-5923",
 			   "Added By": "Default",
 			   "Website": "http://www.govegetarianrestaurant.com/"
 			},
 			"-L8TZNmldVTheASfiUJ8": {
 			   "Name": "Sun in My Belly",
-			   "Address": "2161 College Ave NE Atlanta GA 30317",
+			   "Address": "2161 College Ave NE Atlanta GA",
+			   "Zip-Code": "30317",
 			   "Phone": "(404) 370-1088",
 			   "Added By": "Default",
 			   "Website": "http://www.suninmybelly.com/"
@@ -136,35 +153,40 @@
     	"Downtown": {
     		"-L8TZNmldVTheASfYj58": {
 			   "Name": "Aviva by Kameel",
-			   "Address": "225 Peachtree St NE Atlanta GA 30303",
+			   "Address": "225 Peachtree St NE Atlanta GA",
+			   "Zip-Code": "30303",
 			   "Phone": "(404) 698-3600",
 			   "Added By": "Default",
 			   "Website": "https://www.avivabykameel.com/"
 			},
 			"-L8TZNmldVTheASfLOx3": {
 			   "Name": "Poor Calvin%u2019s",
-			   "Address": "510 Piedmont Ave NE Atlanta GA 30308",
+			   "Address": "510 Piedmont Ave NE Atlanta GA",
+			   "Zip-Code": "30308",
 			   "Phone": "(404) 254-4051",
 			   "Added By": "Default",
 			   "Website": "http://www.poorcalvins.com/Home"
 			},
 			"-L8TZNHR0VTheASfv8yv": {
 			   "Name": "Herban Fix - Vegan Kitchen",
-			   "Address": "565-A Peachtree St NE Atlanta GA 30308",
+			   "Address": "565-A Peachtree St NE Atlanta GA",
+			   "Zip-Code": "30308",
 			   "Phone": "(404) 815-8787",
 			   "Added By": "Default",
 			   "Website": "http://herbanfix.com/"
 			},
 			"-L8TZNmlcV9hewSfv1yv": {
 			   "Name": "The Sun Dial Restaurant",
-			   "Address": "210 Peachtree St NW Atlanta GA 30303",
+			   "Address": "210 Peachtree St NW Atlanta GA",
+			   "Zip-Code": "30303",
 			   "Phone": "(404) 589-7506",
 			   "Added By": "Default",
 			   "Website": "http://www.sundialrestaurant.com/"
 			},
 			"-L8TZNmldVTheAhVC4yv": {
 			   "Name": "Alma Cocina",
-			   "Address": "191 Peachtree St NE Atlanta GA 30303",
+			   "Address": "191 Peachtree St NE Atlanta GA",
+			   "Zip-Code": "30303",
 			   "Phone": "(404) 968-9662",
 			   "Added By": "Default",
 			   "Website": "http://alma-atlanta.com/"
@@ -174,7 +196,8 @@
     	"East Atlanta": {
     		"-L8TZNmldVThe009v8yW": {
 			   "Name": "Gunshow",
-			   "Address": "924 Garrett St Atlanta GA 30316",
+			   "Address": "924 Garrett St Atlanta GA",
+			   "Zip-Code": "30316",
 			   "Phone": "(404) 380-1886",
 			   "Added By": "Default",
 			   "Website": "http://gunshowatl.com/"
@@ -184,28 +207,32 @@
     	"Inman Park": {
     		"-L8TZNmldVTheASivI8v": {
 			   "Name": "Rathbun%u2019s",
-			   "Address": "112 Krog St Atlanta GA 30307",
+			   "Address": "112 Krog St Atlanta GA",
+			   "Zip-Code": "30307",
 			   "Phone": "(404) 524-8280",
 			   "Added By": "Default",
 			   "Website": "http://www.kevinrathbun.com/"
 			 },
 			 "-L8TZNmldVTheAggU9yv": {
 			    "Name": "The Brasserie and Neighborhood Café at PARISH",
-			    "Address": "240 N Highland Ave Atlanta GA 30307",
+			    "Address": "240 N Highland Ave Atlanta GA",
+			    "Zip-Code": "30307",
 			    "Phone": "(404) 681-4434",
 			    "Added By": "Default",
 			    "Website": "http://www.parishatl.com/"
 			  },
 			  "-L8TZNmldVttttSfv8yv": {
 			    "Name": "Sotto Sotto",
-			    "Address": "313 N Highland Ave NE Atlanta GA 30307",
+			    "Address": "313 N Highland Ave NE Atlanta GA",
+			    "Zip-Code": "30307",
 			    "Phone": "(404) 523-6678",
 			    "Added By": "Default",
 			    "Website": "http://www.sottosottoatl.com/"
 			  },
 			  "-L8TZNmldVThe6sfv8dq": {
 			    "Name": "Wisteria",
-			    "Address": "471 N Highland Ave Atlanta GA 30307",
+			    "Address": "471 N Highland Ave Atlanta GA",
+			    "Zip-Code": "30307",
 			    "Phone": "(404) 525-3363",
 			    "Added By": "Default",
 			    "Website": "http://www.wisteria-atlanta.com/"
@@ -215,7 +242,8 @@
     	"Kirkwood": {
     		"-L8TZJrldp9heASfv8yv": {
 			   "Name": "Le Petit Marché",
-			   "Address": "1984 Hosea L Williams Dr Atlanta GA 30317",
+			   "Address": "1984 Hosea L Williams Dr Atlanta GA",
+			   "Zip-Code": "30317",
 			   "Phone": "(404) 371-9888",
 			   "Added By": "Default",
 			   "Website": "https://lepetitmarche.net/"
@@ -225,14 +253,16 @@
     	"Lenox": {
     		"-L8TebiQuDhfnrHw0UNe": {
 			   "Name": "One Midtown Kitchen",
-			   "Address": "559 Dutch Valley Rd NE Atlanta GA 30324",
+			   "Address": "559 Dutch Valley Rd NE Atlanta GA",
+			   "Zip-Code": "30324",
 			   "Phone": "(404) 892-4111",
 			   "Added By": "Default",
 			   "Website": "http://www.onemidtownkitchen.com/"
 			 },
 			 "-L8TehhW_SMPxiBTQzUR": {
 			    "Name": "Green Sprout",
-			    "Address": "1529 Piedmont Ave NE Atlanta GA 30324",
+			    "Address": "1529 Piedmont Ave NE Atlanta GA",
+			    "Zip-Code": "30324",
 			    "Phone": "(404) 874-7373",
 			    "Added By": "Default",
 			    "Website": "http://www.greensproutga.com/"
@@ -242,28 +272,32 @@
         "Midtown": {
         	"-L8Tehe3ISMPxiBTQzUR": {
 				"Name": "RA Sushi Bar Restaurant",
-			    "Address": "1080 Peachtree St NE Atlanta GA 30309",
+			    "Address": "1080 Peachtree St NE Atlanta GA",
+			    "Zip-Code": "30309",
 			    "Phone": "(404) 267-0114",
 			    "Added By": "Default",
 			    "Website": "https://rasushi.com/atlanta/"
 	    	},
 	    	"-L8TehhW882BviBTQzUR": {
 			    "Name": "South City Kitchen - Midtown",
-			    "Address": "1144 Crescent Ave NE Atlanta GA 30309",
+			    "Address": "1144 Crescent Ave NE Atlanta GA",
+			    "Zip-Code": "30309",
 			    "Phone": "(404) 873-7358",
 			    "Added By": "Default",
 			    "Website": "http://southcitykitchen.com/"
 			},
 			"-L8TebiQuDhf560o0UNe": {
 				"Name": "MetroFresh",
-			    "Address": "931 Monroe Dr Atlanta GA 30308",
+			    "Address": "931 Monroe Dr Atlanta GA",
+			    "Zip-Code": "30308",
 			    "Phone": "(404) 724-0151",
 			    "Added By": "Default",
 			    "Website": "http://metrofreshatl.com/"
 			},
 			"-L8TebiQuDhfnrHw7ufX": {
 			    "Name": "Fresh To Order",
-			    "Address": "860 Peachtree St NE Atlanta GA 30308",
+			    "Address": "860 Peachtree St NE Atlanta GA",
+			    "Zip-Code": "30308",
 			    "Phone": "(404) 593-2323",
 			    "Added By": "Default",
 			    "Website": "http://www.freshtoorder.com/"
@@ -273,7 +307,8 @@
 		"North Druid Hills": {
 			"-L8TebiQuDhfnrHyuK71": {
 			   "Name": "Cafe Bombay",
-			   "Address": "2615 Briarcliff Rd NE Atlanta GA 30329",
+			   "Address": "2615 Briarcliff Rd NE Atlanta GA",
+			   "Zip-Code": "30329",
 			   "Phone": "(404) 320-0229",
 			   "Added By": "Default",
 			   "Website": "http://www.cafebombayatlanta.com/"
@@ -283,14 +318,16 @@
 		"Old Fourth Ward": {
 			"-L8TebiQuDhfnrHw7uUL": {
 			   "Name": "Two Urban Licks",
-			   "Address": "820 Ralph McGill Blvd NE Atlanta GA 30306",
+			   "Address": "820 Ralph McGill Blvd NE Atlanta GA",
+			   "Zip-Code": "30306",
 			   "Phone": "(404) 522-4622",
 			   "Added By": "Default",
 			   "Website": "http://www.twourbanlicks.com/"
 			},
 			"-L8Teb123DhfnrHw0UNe": {
 			   "Name": "Serpas True Food",
-			   "Address": "659 Auburn Ave NE Atlanta GA 30312",
+			   "Address": "659 Auburn Ave NE Atlanta GA",
+			   "Zip-Code": "30312",
 			   "Phone": "(404) 688-0040",
 			   "Added By": "Default",
 			   "Website": "http://www.serpasrestaurant.com/"
@@ -299,8 +336,9 @@
 
 		"Sandy Springs": {
 			"-L8TeTrTuJnfnrHw0UNe": {
-			   "Name": "Rumi%u2019s Kitchen",
-			   "Address": "6112 Roswell Rd NE Atlanta GA 30328",
+			   "Name": "Rumis Kitchen",
+			   "Address": "6112 Roswell Rd NE Atlanta GA",
+			   "Zip-Code": "30328",
 			   "Phone": "(404) 477-2100",
 			   "Added By": "Default",
 			   "Website": "http://www.rumiskitchen.com/"
@@ -310,14 +348,16 @@
 		"Vinings": {
 			"-L8Tiw-YniH0Ra7Xn73o": {
 			   "Name": "Bowl Lab",
-			   "Address": "3621 Vinings Slope SE Atlanta GA 30339",
+			   "Address": "3621 Vinings Slope SE Atlanta GA",
+			   "Zip-Code": "30339",
 			   "Phone": "(770) 371-2695",
 			   "Added By": "Default",
 			   "Website": "http://atlbowllab.com/"
 			},
 			"-L8Tiw-YniH0Ra7Xn76u": {
 			   "Name": "Canoe",
-			   "Address": "4199 Paces Ferry Rd SE Atlanta GA 30339",
+			   "Address": "4199 Paces Ferry Rd SE Atlanta GA",
+			   "Zip-Code": "30339",
 			   "Phone": "(770) 432-2663",
 			   "Added By": "Default",
 			   "Website": "https://www.canoeatl.com/"
@@ -327,21 +367,24 @@
 		"Virginia Highland": {
 			"-L8Tiw-YniH0Ra7Xd45V": {
 			   "Name": "La Tavola Trattoria",
-			   "Address": "992 Virginia Ave NE Atlanta GA 30306",
+			   "Address": "992 Virginia Ave NE Atlanta GA",
+			   "Zip-Code": "30306",
 			   "Phone": "(404) 873-5430",
 			   "Added By": "Default",
 			   "Website": "http://latavolatrattoria.com/"
 			},
 			"-L8Tiw-YniH0Ra7R761m": {
 			   "Name": "Gusto",
-			   "Address": "782 Ponce De Leon Ave NE Atlanta GA 30306",
+			   "Address": "782 Ponce De Leon Ave NE Atlanta GA",
+			   "Zip-Code": "30306",
 			   "Phone": "(404) 330-8114",
 			   "Added By": "Default",
 			   "Website": "https://whatsyourgusto.com/"
 			},
 			"-L8Tiw-YniH0tYO2w73o": {
 			   "Name": "Soul Vegetarian Restaurant",
-			   "Address": "652 N Highland Ave NE Atlanta GA 30306",
+			   "Address": "652 N Highland Ave NE Atlanta GA",
+			   "Zip-Code": "30306",
 			   "Phone": "(404) 875-0145",
 			   "Added By": "Default",
 			   "Website": "https://www.soulvegetarian2.com/"
@@ -351,42 +394,48 @@
 		"Westside": {
 			"-L8TebiQuDhfnpY70UNe": {
 			   "Name": "Bacchanalia",
-			   "Address": "1460 Ellsworth Industrial Blvd NW Atlanta GA 30309",
+			   "Address": "1460 Ellsworth Industrial Blvd NW Atlanta GA",
+			   "Zip-Code": "30309",
 			   "Phone": "(404) 365-0410",
 			   "Added By": "Default",
 			   "Website": "http://www.starprovisions.com/bacchanalia/"
 			},
 			"-L8TebiQu89rnrHw0UNi": {
 			   "Name": "Upbeet",
-			   "Address": "1071 Howell Mill Rd Atlanta GA 30318",
+			   "Address": "1071 Howell Mill Rd Atlanta GA",
+			   "Zip-Code": "30318",
 			   "Phone": "(404) 347-1071",
 			   "Added By": "Default",
 			   "Website": "https://www.upbeet.com/"
 			},
 			"-L8TebiQsDxfnr0k0UNy": {
 			   "Name": "JCT Kitchen & Bar",
-			   "Address": "1198 Howell Mill Rd Atlanta GA 30318",
+			   "Address": "1198 Howell Mill Rd Atlanta GA",
+			   "Zip-Code": "30318",
 			   "Phone": "(404) 355-2252",
 			   "Added By": "Default",
 			   "Website": "http://www.jctkitchen.com/"
 			},
 			"-L8TebiQyukfn3Hw0UNe": {
 			   "Name": "The Optimist",
-			   "Address": "914 Howell Mill Rd Atlanta GA 30318",
+			   "Address": "914 Howell Mill Rd Atlanta GA",
+			   "Zip-Code": "30318",
 			   "Phone": "(404) 477-6260",
 			   "Added By": "Default",
 			   "Website": "http://theoptimistrestaurant.com/"
 			},
 			"-L8Tef1QuDh55ZHwcU7T": {
 			   "Name": "Bocado",
-			   "Address": "887 Howell Mill Rd Atlanta GA 30318",
+			   "Address": "887 Howell Mill Rd Atlanta GA",
+			   "Zip-Code": "30318",
 			   "Phone": "(404) 815-1399",
 			   "Added By": "Default",
 			   "Website": "http://www.bocadoatlanta.com/"
 			},
 			"-L8TebiQuDhAyGHRER2d": {
 			   "Name": "Bone Garden Cantina",
-			   "Address": "1425 Ellsworth Industrial Blvd Atlanta GA 30318",
+			   "Address": "1425 Ellsworth Industrial Blvd Atlanta GA",
+			   "Zip-Code": "30318",
 			   "Phone": "(404) 418-9072",
 			   "Added By": "Default",
 			   "Website": "https://bonegardencantina.com/"
